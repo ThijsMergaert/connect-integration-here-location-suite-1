@@ -46,7 +46,8 @@ def geocode(state, city, address):
     "app_id": appId,
     "app_code": appCode,
     "searchtext": "%s, %s, %s" % (address, city, state),
-    "additionaldata": "AdditionalAddressProvider,25"}
+    "additionaldata": "AdditionalAddressProvider,25",
+    "source": "AmazonConnect"}
   # request
   response = requests.get(url, params=parameters)
   # process response

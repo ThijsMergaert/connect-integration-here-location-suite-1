@@ -51,7 +51,8 @@ def getPlaces(lat, lng, radius, category):
     "app_id": appId,
     "app_code": appCode,
     "at": "{0},{1};u={2}".format(lat, lng, radius),
-    "cat": "" if category is None else category
+    "cat": "" if category is None else category,
+    "source": "AmazonConnect"
   }
   # call API synchronously
   response = requests.get(url, params=parameters)

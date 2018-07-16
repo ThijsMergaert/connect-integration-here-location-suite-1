@@ -47,7 +47,8 @@ def getRoute(waypoints):
     "app_id": appId,
     "app_code": appCode,
     "mode": "fastest;car;traffic:enabled",
-    "language": "en-us"
+    "language": "en-us",
+    "source": "AmazonConnect"
   }
   for index, w in enumerate(waypoints):
     parameters["waypoint%d" % index] = 'geo!%f,%f' % (w[0], w[1])
